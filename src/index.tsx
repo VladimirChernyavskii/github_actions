@@ -7,10 +7,11 @@ import './styles.css';
 
 const domNode = document.getElementById('root') as HTMLDivElement;
 const root = createRoot(domNode);
+declare const __PUBLIC_PATH__: string;
 root.render(
 	<StrictMode>
 		<Analytic.Provider value={{ yandexId: 96728508, googleId: 'G-ZXWBHB1NR0' }}>
-			<BrowserRouter basename={(process.env.PUBLIC_PATH as string) || '/'}>
+			<BrowserRouter basename={__PUBLIC_PATH__}>
 				<App />
 			</BrowserRouter>
 		</Analytic.Provider>

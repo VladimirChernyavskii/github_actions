@@ -13,7 +13,7 @@ module.exports = {
 		filename: production
 			? 'static/scripts/[name].[contenthash].js'
 			: 'static/scripts/[name].js', // РёРјСЏ РЅР°С€РµРіРѕ Р±Р°РЅРґР»Р°
-		publicPath: process.env.PUBLIC_PATH ? process.env.PUBLIC_PATH : '/',
+		publicPath: process.env.PUBLIC_PATH || '/',
 		chunkFilename: 'static/scripts/[name].[contenthash].bundle.js',
 	},
 	//РќСѓР¶РЅРѕ РїРѕРјРѕС‡СЊ РІРµР±РїР°РєСѓ РЅР°СѓС‡РёС‚СЃСЏ СЂР°Р±РѕС‚Р°С‚СЊ СЃ jsx Рё tsx С„Р°Р№Р»Р°РјРё РґР»СЏ СЌС‚РѕРіРѕ РёСЃРїРѕР»СЊР·СѓСЋС‚ ts loader
@@ -90,6 +90,9 @@ module.exports = {
 		}),
 		new webpack.EnvironmentPlugin({
 			NODE_ENV: 'development', // Р·РЅР°С‡РµРЅРёРµ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ 'development' РµСЃР»Рё РїРµСЂРµРјРµРЅРЅР°СЏ process.env.NODE_ENV РЅРµ РїРµСЂРµРґР°РЅР°
+		}),
+		new webpack.DefinePlugin({
+			__PUBLIC_PATH__: JSON.stringify(process.env.PUBLIC_PATH || '/'),
 		}),
 	],
 };
