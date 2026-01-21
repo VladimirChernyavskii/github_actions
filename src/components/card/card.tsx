@@ -1,4 +1,4 @@
-import { Card } from '../card-list/card-list';
+﻿import { Card } from '../card-list/card-list';
 import styles from './card.module.scss';
 type CardProps = Pick<Card, 'name'>;
 

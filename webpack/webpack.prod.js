@@ -1,4 +1,4 @@
-module.exports = {
+﻿module.exports = {
 	mode: 'production',
 	devtool: false,
 };

@@ -1,4 +1,4 @@
-import Card from '../card/card';
+﻿import Card from '../card/card';
 import styles from './card-list.module.scss';
 export type Card = {
 	id: number;
@@ -10,7 +10,7 @@ type CardListProps = {
 };
 
 export default function CardList({ dataCard }: CardListProps) {
-	dataCard.push({ id: 3, name: 'Добавить карточку' });
+	dataCard.push({ id: 3, name: 'Р”РѕР±Р°РІРёС‚СЊ РєР°СЂС‚РѕС‡РєСѓ' });
 	return (
 		<section className={styles.container}>
 			{dataCard.map((item) => (

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+﻿import { useEffect, useState } from 'react';
 import styles from './modal.module.scss';
 export default function Modal() {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -8,7 +8,7 @@ export default function Modal() {
 			if (e.key === 'Escape') {
 				e.preventDefault();
 				setIsOpen(false);
-				console.log('Нажали кнопку ESC');
+				console.log('РќР°Р¶Р°Р»Рё РєРЅРѕРїРєСѓ ESC');
 			}
 		};
 		document.addEventListener('keydown', handleEsc);
@@ -16,12 +16,14 @@ export default function Modal() {
 
 	return (
 		<div className={styles.wrapper}>
-			<button onClick={() => setIsOpen(true)}>Открыть модальное окно</button>
+			<button onClick={() => setIsOpen(true)}>
+				РћС‚РєСЂС‹С‚СЊ РјРѕРґР°Р»СЊРЅРѕРµ РѕРєРЅРѕ
+			</button>
 			<div className={styles.modal}>
 				{isOpen && (
 					<div className={styles.container}>
 						<button onClick={() => setIsOpen(false)}>
-							Закрыть модальное окно
+							Р—Р°РєСЂС‹С‚СЊ РјРѕРґР°Р»СЊРЅРѕРµ РѕРєРЅРѕ
 						</button>
 					</div>
 				)}

@@ -1,4 +1,4 @@
-import { createContext } from 'react';
+﻿import { createContext } from 'react';
 type AnalyticState = {
 	yandexId?: number;
 	googleId?: string;

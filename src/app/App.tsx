@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+﻿import React, { Suspense } from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import styles from './app.module.scss';
 const Modal = React.lazy(
@@ -17,10 +17,11 @@ export const App = () => {
 		<div className={styles.page}>
 			<div className={styles.links}>
 				<Link to='/another' className={styles.link}>
-					Перейти на станицу c компонентом AnotherComponent
+					РџРµСЂРµР№С‚Рё РЅР° СЃС‚Р°РЅРёС†Сѓ c РєРѕРјРїРѕРЅРµРЅС‚РѕРј
+					AnotherComponent
 				</Link>
 				<Link to='/modal' className={styles.link}>
-					Перейти на станицу c компонентом Modal
+					РџРµСЂРµР№С‚Рё РЅР° СЃС‚Р°РЅРёС†Сѓ c РєРѕРјРїРѕРЅРµРЅС‚РѕРј Modal
 				</Link>
 			</div>
 			<Routes>
